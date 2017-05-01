@@ -44,6 +44,13 @@
 						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
 						get_the_title()
 					) );
+
+                    if ( ! is_user_logged_in() ) {
+                        $login_args = array(
+                            'redirect'  => get_home_url() . '/podcast/',
+                        );
+                        wp_login_form( $login_args );
+                    }
 				?>
 			</div><!-- .entry-content -->
 
