@@ -2710,6 +2710,9 @@ h2.widget-title {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .widget .subscribe li {
