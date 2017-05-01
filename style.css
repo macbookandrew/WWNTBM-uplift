@@ -4280,3 +4280,7 @@ object {
 		padding: 0;
 	}
 }
+
+body:not(.logged-in) .menu-item-object-podcast {
+	display: none !important;
+}
