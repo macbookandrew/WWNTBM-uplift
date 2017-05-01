@@ -2702,6 +2702,78 @@ h2.widget-title {
     border: 0;
 }
 
+.textwidget h3 {
+	font-size: medium;
+}
+
+.widget .subscribe {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.widget .subscribe li {
+	display: inline-block;
+	border: none;
+	width: 25%;
+	box-sizing: border-box;
+}
+
+.subscribe li a {
+	font-size: 2rem;
+	color: white;
+	padding: .3em;
+	border-radius: 5px;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.subscribe li a[title="iTunes"] {
+	background-color: #732BBE;
+}
+
+.subscribe li a[title="iTunes"]:hover,
+.subscribe li a[title="iTunes"]:active {
+	color: rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(115, 43, 190, 0.5);
+}
+
+.subscribe li a[title="Android"] {
+	background-color: #6AB344;
+}
+
+.subscribe li a[title="Android"]:hover,
+.subscribe li a[title="Android"]:active {
+	color: rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(106, 179, 68, 0.5);
+}
+
+.subscribe li a[title="Overcast"] {
+	background-color: #ff8800;
+}
+
+.subscribe li a[title="Overcast"]:hover,
+.subscribe li a[title="Overcast"]:active {
+	color: rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(255, 136, 0, 0.5);
+}
+
+.subscribe li a[title="Email"] {
+	background-color: #0D3CA1;
+}
+
+.subscribe li a[title="Email"]:hover,
+.subscribe li a[title="Email"]:active {
+	color: rgba(255, 255, 255, 0.5);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(13, 60, 161, 0.5);
+}
+
+.subscribe .mc4wp-form {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 16.0 Media
 --------------------------------------------------------------*/
