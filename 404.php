@@ -21,9 +21,19 @@ get_header(); ?>
                     <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
                 </header><!-- .page-header -->
                 <div class="page-content">
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
+                    <?php
+                    if ( ! is_user_logged_in() ) {
+                        $login_args = array(
+                            'redirect'  => get_home_url() . '/podcast/',
+                        );
+                        echo '<h2>Log In</h2>
+                        <p>Please log in.</p>';
+                        wp_login_form( $login_args );
+                    } else { ?>
+                        <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
 
-                    <?php get_search_form(); ?>
+                        <?php get_search_form(); ?>
+                    <?php } ?>
 
                 </div><!-- .page-content -->
             </section><!-- .error-404 -->
