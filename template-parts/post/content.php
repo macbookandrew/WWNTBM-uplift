@@ -40,7 +40,13 @@
     </header><!-- .entry-header -->
 
     <div class="entry-summary">
-        <?php the_excerpt(); ?>
+        <?php
+        if ( ! is_singular() ) {
+            the_excerpt();
+        } else {
+            the_content();
+        }
+        ?>
     </div><!-- .entry-summary -->
 
 </article><!-- #post-## -->
