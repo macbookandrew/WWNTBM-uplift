@@ -4281,6 +4281,8 @@ object {
 	}
 }
 
-body:not(.logged-in) .menu-item-object-podcast {
 	display: none !important;
+body:not(.logged-in) .menu-item-object-podcast,
+body:not(.logged-in) .menu-item-object-series,
+body:not(.logged-in) .menu-item-104 {
 }
