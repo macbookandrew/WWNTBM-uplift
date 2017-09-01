@@ -45,29 +45,17 @@
                         get_the_title()
                     ) );
 
-                    if ( is_user_logged_in() ) {
-                        echo '<section class="home-half login">
-                            <h2>Missionary Podcasts</h2>
-                            <p><a href="' . get_home_url() . '/podcast/" class="button">Access the missionary-only podcasts here</a>.</p>
-                        </section>';
-                    }
-
-                    echo '</section>
-                    <section class="home-half public">
-                    <h2>Uplift for Servants</h2>
-                    ' . do_shortcode( '[podcast_playlist series="uplift-for-servants"]' ) . '</section>';
-
                     if ( ! is_user_logged_in() ) {
                         $login_args = array(
                             'redirect'  => get_home_url() . '/podcast/',
                         );
-                        echo '<section class="home-half login">
-                            <h2>Missionary Podcasts</h2>
-                            <p>Please log in to access these podcasts.</p>';
-                            wp_login_form( $login_args );
-                        echo '</section>';
+                        echo '<h2>Log In</h2>
+                        <p>Please log in to access these podcasts.</p>';
+                        wp_login_form( $login_args );
+                    } else {
+                        echo '<h2>Podcasts</h2>
+                        <p><a href="' . get_home_url() . '/podcast/" class="button">Access the podcasts here</a>.</p>';
                     }
-
                 ?>
             </div><!-- .entry-content -->
 
