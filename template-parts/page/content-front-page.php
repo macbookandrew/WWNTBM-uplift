@@ -44,18 +44,6 @@
                         __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
                         get_the_title()
                     ) );
-
-                    if ( ! is_user_logged_in() ) {
-                        $login_args = array(
-                            'redirect'  => get_home_url() . '/podcast/',
-                        );
-                        echo '<h2>Log In</h2>
-                        <p>Please log in to access these podcasts.</p>';
-                        wp_login_form( $login_args );
-                    } else {
-                        echo '<h2>Podcasts</h2>
-                        <p><a href="' . get_home_url() . '/podcast/" class="button">Access the podcasts here</a>.</p>';
-                    }
                 ?>
             </div><!-- .entry-content -->
 
