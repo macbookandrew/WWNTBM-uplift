@@ -42,6 +42,10 @@ function default_post_visibility() {
 }
 add_action( 'post_submitbox_misc_actions' , 'default_post_visibility' );
 
+/**
+ * Show podcast info only to logged-in users
+ * @return string HTML content
+ */
 function uplift_login_shortcode() {
     ob_start();
 
