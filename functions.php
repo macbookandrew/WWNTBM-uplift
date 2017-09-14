@@ -64,3 +64,13 @@ function uplift_login_shortcode() {
     return ob_get_clean();
 }
 add_shortcode( 'conditional_login_form', 'uplift_login_shortcode' );
+
+/**
+ * Force HTTPS feed stylsheet URL
+ * @param  string $feed_url RSS feed stylesheet URL
+ * @return string modified RSS feed stylesheet URL
+ */
+function uplift_rss_stylesheet( $feed_style_url ) {
+    return str_replace( 'http://', 'https://', $feed_style_url );
+}
+add_filter( 'ssp_rss_stylesheet', 'uplift_rss_stylesheet' );
