@@ -74,3 +74,16 @@ function uplift_rss_stylesheet( $feed_style_url ) {
     return str_replace( 'http://', 'https://', $feed_style_url );
 }
 add_filter( 'ssp_rss_stylesheet', 'uplift_rss_stylesheet' );
+
+/**
+ * Add placeholder attributes to Mailchimp signup form
+ * @param  array $fields form fields
+ * @return array modified form fields
+ */
+function uplift_mc_placeholders( $fields ) {
+    $fields[0]['default'] = 'john.doe@example.com';
+    $fields[1]['default'] = 'John';
+    $fields[2]['default'] = 'Doe';
+    return $fields;
+}
+add_filter( 'mailchimp_dev_mode_fields', 'uplift_mc_placeholders' );
