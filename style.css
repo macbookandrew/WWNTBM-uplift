@@ -908,7 +908,7 @@ html[lang="th"] * {
 label {
     color: #333;
     display: block;
-    font-weight: 800;
+    font-weight: normal;
     margin-bottom: 0.5em;
 }
 
@@ -4314,4 +4314,12 @@ body:not(.logged-in) .menu-item-object-podcast,
 body:not(.logged-in) .menu-item-object-series,
 body:not(.logged-in) .menu-item-104 {
     display: none !important;
+}
+
+#mc-indicates-required {
+	display: none;
+}
+
+.mc_merge_var {
+	margin-bottom: 1em;
 }
