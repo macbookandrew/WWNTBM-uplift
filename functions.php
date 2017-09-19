@@ -87,3 +87,18 @@ function uplift_mc_placeholders( $fields ) {
     return $fields;
 }
 add_filter( 'mailchimp_dev_mode_fields', 'uplift_mc_placeholders' );
+
+/**
+ * Force SSL/TLS
+ *
+ * Workaround for a bug where MU domain mapping did not work when the domain included https://
+ *
+ * @param  string $string template directory, WP ajax URL, etc.
+ * @return string HTTPS string
+ */
+function uplift_force_tls( $string ) {
+    return str_replace( 'http://', 'https://', $string );
+}
+add_filter( 'home_url', 'uplift_force_tls' );
+add_filter( 'template_directory_uri', 'uplift_force_tls' );
+add_filter( 'stylsheet_directory_uri', 'uplift_force_tls' );
