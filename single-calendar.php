@@ -28,6 +28,12 @@ get_header(); ?>
 					 */
 					get_template_part( 'template-parts/post/content', get_post_format() );
 
+					$calendar_id  = base64_decode( get_post_meta( get_the_ID(), '_google_calendar_id', true ) );
+					$calendar_url = '://www.google.com/calendar/ical/' . $calendar_id . '/public/basic.ics';
+
+					echo '<p class="entry-content">Subscribe to the calendar: <a href="webcal' . esc_html( $calendar_url ) . '">click to subscribe in your calendar app</a> or <a href="https' . esc_html( $calendar_url ) . '">copy and paste</a> the calendar URL to subscribe.</li>
+					</ul>';
+
 				endwhile;
 
 				the_posts_pagination(
