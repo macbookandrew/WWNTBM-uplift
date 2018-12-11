@@ -3360,7 +3360,7 @@ object {
         padding-right: 3em;
     }
 
-    .has-sidebar:not(.error404) #primary {
+    .has-sidebar:not(.error404) #primary:not(.full-width) {
         float: left;
         width: 58%;
     }
