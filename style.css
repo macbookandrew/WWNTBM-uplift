@@ -4,7 +4,7 @@ Theme URI: https://andrewrminion.com
 Author: AndrewRMinion Design
 Author URI: https://andrewrminion.com
 Description: Child theme of Twenty Seventeen.
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyseventeen
@@ -219,6 +219,14 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
+}
+
+.podcast-jump {
+    padding: .5em 1em;
+    background-color: gray;
+    margin-left: 0.5em;
+    font-size: .85rem;
+    font-weight: normal;
 }
 
 fieldset {
