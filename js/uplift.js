@@ -2,6 +2,26 @@
 'use strict';
 
 (function($) {
+
+	/**
+	 * Convert timestamp to seconds.
+	 *
+	 * @param {string} str H:m:s-formatt timestamp.
+	 *
+	 * @returns {string} Number of seconds.
+	 */
+	function hmsToSecondsOnly(str) {
+		var p = str.split(':'),
+			s = 0, m = 1;
+
+		while (p.length > 0) {
+			s += m * parseInt(p.pop(), 10);
+			m *= 60;
+		}
+
+		return s;
+	}
+
 	$(document).ready(function() {
 
 		/**
