@@ -20,7 +20,7 @@
 		$('.podcast-jump').on('click', function(e) {
 			e.preventDefault();
 			var player = $('.podcast_player audio').get(0),
-				jumpTime = hmsToSecondsOnly($(this).attr('href').replace('#', ''));
+				jumpTime = hmsToSecondsOnly($(this).data('timestamp'));
 
 			player.setCurrentTime(jumpTime);
 			player.play();
