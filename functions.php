@@ -14,7 +14,7 @@ define( 'UPLIFT_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
  * Enqueue subscription form JS
  */
 function uplift_enqueue_js() {
-	wp_enqueue_script( 'subscribe', get_stylesheet_directory_uri() . '/js/subscribe.js', array( 'jquery' ), UPLIFT_THEME_VERSION, true );
+	wp_enqueue_script( 'uplift', get_stylesheet_directory_uri() . '/js/uplift.js', array( 'jquery' ), UPLIFT_THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'uplift_enqueue_js' );
 
