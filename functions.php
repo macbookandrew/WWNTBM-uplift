@@ -15,6 +15,10 @@ define( 'UPLIFT_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
  */
 function uplift_enqueue_js() {
 	wp_enqueue_script( 'uplift', get_stylesheet_directory_uri() . '/js/uplift.js', array( 'jquery' ), UPLIFT_THEME_VERSION, true );
+
+	// bib.ly scripts for auto-linking Bible verses.
+	wp_enqueue_script( 'bibly', 'https://code.bib.ly/bibly.min.js', array(), null, true );
+	wp_enqueue_style( 'bibly', 'https://code.bib.ly/bibly.min.css', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'uplift_enqueue_js' );
 
