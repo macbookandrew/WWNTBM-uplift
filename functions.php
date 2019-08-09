@@ -17,9 +17,9 @@ function uplift_enqueue_js() {
 	wp_enqueue_script( 'uplift', get_stylesheet_directory_uri() . '/js/uplift.js', array( 'jquery' ), UPLIFT_THEME_VERSION, true );
 
 	// bib.ly scripts for auto-linking Bible verses.
-	wp_enqueue_script( 'bibly', 'https://code.bib.ly/bibly.min.js', array(), null, true );
-	wp_enqueue_style( 'bibly', 'https://code.bib.ly/bibly.min.css', array(), null );
-	wp_add_inline_style( 'bibly', 'var bibly={linkVersion:"KJV",enablePopups:true,popupVersion:"KJV",autoStart:true,newWindow:true};', 'before' );
+	wp_enqueue_script( 'bibly-js', 'https://code.bib.ly/bibly.min.js', array(), null, true );
+	wp_enqueue_style( 'bibly-css', 'https://code.bib.ly/bibly.min.css', array(), null );
+	wp_add_inline_style( 'bibly-js', 'var bibly={linkVersion:"KJV",enablePopups:true,popupVersion:"KJV",autoStart:true,newWindow:true};', 'before' );
 }
 add_action( 'wp_enqueue_scripts', 'uplift_enqueue_js' );
 
